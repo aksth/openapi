@@ -1,0 +1,67 @@
+---
+openapi: 3.0.2
+info:
+  title: Communication Model
+  version: '141405445'
+paths: {}
+components:
+  schemas:
+    booking:
+      type: object
+      properties:
+        pet:
+          oneOf:
+          - "$ref": "#/components/schemas/Cat"
+          - "$ref": "#/components/schemas/Dog"
+          discriminator:
+            propertyName: petType
+            mapping:
+              dog: "#/components/schemas/Dog"
+              cat: "#/components/schemas/Cat"
+        foo:
+          type: string
+    Pet:
+      type: object
+      discriminator:
+        propertyName: petType
+      properties:
+        name:
+          type: string
+        petType:
+          type: string
+      required:
+      - name
+      - petType
+    Cat:
+      description: A representation of a cat. Note that `Cat` will be used as the
+        discriminator value.
+      allOf:
+      - "$ref": "#/components/schemas/Pet"
+      - type: object
+        properties:
+          huntingSkill:
+            type: string
+            description: The measured skill for hunting
+            default: lazy
+            enum:
+            - clueless
+            - lazy
+            - adventurous
+            - aggressive
+        required:
+        - huntingSkill
+    Dog:
+      description: A representation of a dog. Note that `Dog` will be used as the
+        discriminator value.
+      allOf:
+      - "$ref": "#/components/schemas/Pet"
+      - type: object
+        properties:
+          packSize:
+            type: integer
+            format: int32
+            description: the size of the pack the dog is from
+            default: 0
+            minimum: 0
+        required:
+        - packSize

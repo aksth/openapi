@@ -1,0 +1,7 @@
+templateDir: my_custom_templates
+additionalProperties:
+  artifactId: kotlin-petstore-client
+  serializableModel: "true"
+  dateLibrary: java8
+files:
+  AUTHORS.md: {}

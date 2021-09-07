@@ -1,0 +1,6 @@
+additionalProperties:
+  modelPackage: com.progressoft.petstore.contract.v1.request
+  apiPackage: com.progressoft.petstore.contract.v1.api
+  generateModelTests: false
+  useTags: true
+  interfaceOnly: true

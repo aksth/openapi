@@ -1,0 +1,13 @@
+.openapi-generator-ignore
+README.md
+pom.xml
+src/main/java/com/progressoft/petstore/contract/v1/api/ApiUtil.java
+src/main/java/com/progressoft/petstore/contract/v1/api/PetApi.java
+src/main/java/com/progressoft/petstore/contract/v1/api/StoreApi.java
+src/main/java/com/progressoft/petstore/contract/v1/api/UserApi.java
+src/main/java/com/progressoft/petstore/contract/v1/request/Category.java
+src/main/java/com/progressoft/petstore/contract/v1/request/ModelApiResponse.java
+src/main/java/com/progressoft/petstore/contract/v1/request/Order.java
+src/main/java/com/progressoft/petstore/contract/v1/request/Pet.java
+src/main/java/com/progressoft/petstore/contract/v1/request/Tag.java
+src/main/java/com/progressoft/petstore/contract/v1/request/User.java

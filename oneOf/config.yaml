@@ -1,0 +1,14 @@
+additionalProperties:
+  # modelPackage: com.progressoft.petstore.contract.v1.request
+  # apiPackage: com.progressoft.petstore.contract.v1.api
+  generateModelTests: false
+  useTags: true
+  interfaceOnly: true
+  importRolesAllowed: true
+  #legacyDiscriminatorBehavior: true
+templateDir: my_custom_templates
+files:
+  AUTHORS.md: {}
+  api.mustache:
+    templateType: API
+    destinationFilename: .java

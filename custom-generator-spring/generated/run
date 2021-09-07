@@ -1,0 +1,9 @@
+to generate the generator
+
+openapi-generator-cli meta -o ./my-codegen -n my-codegen -p com.my.company.codegen
+
+===
+
+to run the custom generator
+
+java -cp ./my-codegen-openapi-generator-1.0.0.jar:./openapi-generator-cli.jar org.openapitools.codegen.OpenAPIGenerator generate -g my-codegen -i ./petstore.yaml -o ./out -c config.yaml

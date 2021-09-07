@@ -1,0 +1,6 @@
+openapi-generator-cli generate -g spring -i petstore.yaml -o outdir -c config.yaml
+
+
+openapi-generator-cli generate -g spring -i cargo.yaml -o outdir -c config.yaml
+
+openapi-generator-cli generate -g spring -i petstore222.json -o outdir -c config.yaml

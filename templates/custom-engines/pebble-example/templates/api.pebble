@@ -1,0 +1,9 @@
+package {{packageName}}
+import (
+    "net/http"
+{% for item in imports %}
+    "{{item.import}}"
+{% endfor %}
+)
+type Generated{{classname}}Servicer
+// etc

@@ -1,0 +1,15 @@
+package {{packageName}}
+{% for item in models %}
+{% if item.isEnum %}
+// TODO: enum
+{% else %}
+{% if item.description is not empty %}// {{item.description}}{% endif %}
+type {{item.classname}} struct {
+{% for var in item.model.vars %}
+    {% if var.description is not empty %}// {{var.description}}{% endif %}
+    {{var.name}} {% if var.isNullable %}*{% endif %}{{var.dataType}} `json:"{{var.baseName}}{% if var.required == false %},omitempty{% endif %}"{% if var.withXml == true %} xml:"{{var.baseName}}{% if var.isXmlAttribute %},attr{% endif %}"{% endif %}`
+{% endfor %}
+}
+{% endif %}
+{{model.name}}
+{% endfor %}

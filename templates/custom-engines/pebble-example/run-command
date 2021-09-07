@@ -1,0 +1,60 @@
+java -cp ./pebble-template-adapter-1.0-SNAPSHOT-all.jar:/home/akash/Documents/swagger/openapi-generator/source-code/openapi-generator/modules/openapi-generator-cli/target/openapi-generator-cli.jar \
+    org.openapitools.codegen.OpenAPIGenerator \
+    generate \
+    -g go \
+    -i https://raw.githubusercontent.com/OAI/OpenAPI-Specification/master/examples/v2.0/json/petstore-minimal.json \
+    -e pebble \
+    -o ./out \
+    -t ./templates \
+    --global-property models,modelDocs,modelTests,apis,apiTests,apiDocs
+
+
+
+
+java -cp ./pebble-template-adapter-1.0-SNAPSHOT-all.jar:./openapi-generator-cli.jar \
+    org.openapitools.codegen.OpenAPIGenerator \
+    generate \
+    -g go \
+    -i ./petstore.yaml \
+    -e pebble \
+    -o ./out \
+    -t ./templates \
+    --global-property models,modelDocs,modelTests,apis,apiTests,apiDocs
+
+    java -cp ./pebble-template-adapter-1.0-SNAPSHOT-all.jar:./openapi-generator-cli.jar \
+    org.openapitools.codegen.OpenAPIGenerator \
+    generate \
+    -g go \
+    -i ./petstore.yaml \
+    -e mustache \
+    -o ./out \
+    -t ./templates \
+    --global-property models,modelDocs,modelTests,apis,apiTests,apiDocs
+
+
+
+openapi-generator-cli generate \
+-g go \
+    -i ./petstore.yaml \
+    -o ./out \
+    --global-property models,apis
+
+
+openapi-generator generate -g go \
+    -o out \
+    -i ./petstore.yaml \
+    --global-property debugOpenAPI=true
+
+
+    === cli
+
+
+    java -cp ./pebble-template-adapter-1.0-SNAPSHOT-all.jar:./openapi-generator-cli.jar \
+    org.openapitools.codegen.OpenAPIGenerator \
+    generate \
+    -g go \
+    -i ./petstore.yaml \
+    -e pebble \
+    -o ./out \
+    -t ./templates \
+    --global-property models,modelDocs,modelTests,apis,apiTests,apiDocs

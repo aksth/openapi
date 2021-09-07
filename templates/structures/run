@@ -1,0 +1,15 @@
+openapi-generator-cli generate -g go \
+    -o ./out \
+    -i petstore.yaml \
+    --global-property debugOpenAPI=true
+
+    openapi-generator-cli generate -g go \
+    -o ./out \
+    -i petstore.yaml \
+    --global-property debugModels=true
+    
+    openapi-generator-cli generate -g go \
+    -o ./out \
+    -i petstore.yaml \
+    --global-property debugSupportingFiles=true
+    
